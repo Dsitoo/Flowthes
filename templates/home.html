@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block estilos %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock estilos %}
+
+{% block body %}
+<a class="btn btn-secondary" href="{{ url_for('logout') }}">Cerrar Sesión</a>
+
+<div class="header">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='img/logo2.png') }}" alt="Logo de Flowthes" class="logo">
+    </div>
+    <div class="nav">
+        <a href="#">Estado de Envíos</a>
+        <a href="#">Categorías</a>
+    </div>
+    <img class="perfil" src="perfil.png" alt="Perfil">
+    <div class="cart-icon">🛒</div>
+</div>
+
+<!-- Barra de Filtro -->
+<div class="filter-bar">
+    <label for="precio-min">Filtrar:</label>
+    <input type="number" id="precio-min" placeholder="Precio Mínimo">
+    <input type="number" id="precio-max" placeholder="Precio Máximo">
+    <select id="talla">
+        <option value="" disabled selected>Talla</option>
+        <option value="s">S</option>
+        <option value="m">M</option>
+        <option value="l">L</option>
+    </select>
+    <select id="material">
+        <option value="" disabled selected>Material</option>
+        <option value="algodon">Algodón</option>
+        <option value="poliester">Poliéster</option>
+    </select>
+    <select id="publico">
+        <option value="" disabled selected>Público</option>
+        <option value="hombres">Hombres</option>
+        <option value="mujeres">Mujeres</option>
+    </select>
+</div>
+
+<!-- Grid de Productos -->
+<div class="product-grid">
+    <div class="product-item">
+        <img src="producto.png" alt="Producto">
+    </div>
+    <div class="product-item">
+        <img src="producto.png" alt="Producto">
+    </div>
+    <div class="product-item">
+        <img src="producto.png" alt="Producto">
+    </div>
+    <div class="product-item">
+        <img src="producto.png" alt="Producto">
+    </div>
+    <div class="product-item">
+        <img src="producto.png" alt="Producto">
+    </div>
+    <div class="product-item">
+        <img src="producto.png" alt="Producto">
+    </div>
+    <div class="product-item">
+        <img src="producto.png" alt="Producto">
+    </div>
+    <div class="product-item">
+        <img src="producto.png" alt="Producto">
+    </div>
+</div>
+
+{% endblock %}
